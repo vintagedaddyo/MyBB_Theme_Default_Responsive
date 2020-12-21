@@ -41,11 +41,13 @@ license.txt
 
 ****** Change log ******
 
-1.2*  *(WIP - still have about 90 more templates to go over before beginning any finishing tweaks, thus currently this project is not suggested for live usage until such time that I can get the free time to finish up.
+1.2*  *(WIP - still have about 90 more templates to go over before beginning any finishing tweaks, thus currently this project is not suggested for live usage until such time that I can get the free time to finish up. ***
 
 - starting to slowly update the old project now in 1.8.24 but as a standalone theme package rather than the old resources files for a core by default project where it was first a part of similar to how I eventually also made the repo core admin style a standalone project back when I stopped the response core by default project years ago ie: https://github.com/vintagedaddyo/MyBB_ACP_Style_Default_Responsive .
 
 - replacing font awesome 4 with font awesome 5
+
+*** -> hopefully I can find the free time soon to finish this project up so then I can start considering setting focus back on maybe starting this other project back up again ie: https://github.com/vintagedaddyo/daddyobb_dev/commit/18419714ed3fe6ebb26b35613113f08b5684a95f?short_path=dddf631#diff-dddf631bec6f45ea453032a44548022736303da3b99b7c0e36d3d3a614169584
 
 1.1
 
