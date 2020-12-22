@@ -10939,7 +10939,7 @@ if(use_xmlhttprequest == "1")
 {$footer}
 </body>
 </html>]]></template>
-		<template name="portal_announcement" version="1800"><![CDATA[<div class="panel panel-primary">
+		<template name="portal_announcement" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
 		<span class="panel-title"><strong><a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$announcement['subject']}</a></strong></span>		
 	</div>
@@ -10956,14 +10956,14 @@ if(use_xmlhttprequest == "1")
 		</div>
 	</div>	
 	<div class="panel-footer text-right">		
-			<a href="{$mybb->settings['bburl']}/printthread.php?tid={$announcement['tid']}"><i class="fa fa-print" title="{$lang->print_this_item}"></i></a>{$senditem}						
+			<a href="{$mybb->settings['bburl']}/printthread.php?tid={$announcement['tid']}"><i class="fas fa-print" title="{$lang->print_this_item}"></i></a>{$senditem}						
 	</div>
 </div>]]></template>
 		<template name="portal_announcement_avatar" version="1800"><![CDATA[<img class="img-thumbnail" src="{$useravatar['image']}" alt="">]]></template>
 		<template name="portal_announcement_icon" version="1800"><![CDATA[<img src="{$icon['path']}" alt="{$icon['name']}" title="{$icon['name']}">]]></template>
 		<template name="portal_announcement_numcomments" version="1400"><![CDATA[- <a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$lang->replies}</a> ({$announcement['replies']})]]></template>
 		<template name="portal_announcement_numcomments_no" version="120"><![CDATA[- {$lang->no_replies}]]></template>
-		<template name="portal_announcement_send_item" version="1800"><![CDATA[&nbsp;<a href="{$mybb->settings['bburl']}/sendthread.php?tid={$announcement['tid']}"><i class="fa fa-envelope" title="{$lang->send_to_friend}"></i></a>]]></template>
+		<template name="portal_announcement_send_item" version="1824"><![CDATA[&nbsp;<a href="{$mybb->settings['bburl']}/sendthread.php?tid={$announcement['tid']}"><i class="fas fa-envelope" title="{$lang->send_to_friend}"></i></a>]]></template>
 		<template name="portal_latestthreads" version="120"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
 			<span class="panel-title"><strong>{$lang->latest_threads}</strong></span>
@@ -10975,14 +10975,14 @@ if(use_xmlhttprequest == "1")
 		</div>	
 	</div>
 </div>]]></template>
-		<template name="portal_latestthreads_thread" version="120"><![CDATA[<div class="row bottom-border small">		
+		<template name="portal_latestthreads_thread" version="1824"><![CDATA[<div class="row bottom-border small">		
 	<div class="col-lg-12 padding-8px">	
-		<strong><a href="{$mybb->settings['bburl']}/{$thread['threadlink']}" title="{$full_thread['subject']}">{$thread['subject']}</a></strong><br>
+		<strong><a href="{$mybb->settings['bburl']}/{$thread['threadlink']}" title="{$full_thread['subject']}"><i class="fas fa-arrow-right" data-toggle="tooltip" title="" data-placement="bottom" style="color:#008000;" data-original-title="{$lang->go}"></i>&nbsp;{$thread['subject']}</a></strong><br>
 		{$lang->forum} <a href="{$thread['forumlink']}">{$thread['forumname']}</a><br>				
 		<a href="{$thread['lastpostlink']}">{$lang->latest_threads_lastpost}</a> {$lastposterlink}<br>
 		{$lastpostdate}<br>
-		<i class="fa fa-angle-double-right"></i>&nbsp;{$lang->latest_threads_replies} {$thread['replies']}<br>
-		<i class="fa fa-angle-double-right"></i>&nbsp;{$lang->latest_threads_views} {$thread['views']}		
+		<i class="fas fa-angle-double-right"></i>&nbsp;{$lang->latest_threads_replies} {$thread['replies']}<br>
+		<i class="fas fa-angle-double-right"></i>&nbsp;{$lang->latest_threads_views} {$thread['views']}		
 	</div>
 </div>]]></template>
 		<template name="portal_pms" version="120"><![CDATA[<div class="panel panel-primary">
@@ -10998,7 +10998,7 @@ if(use_xmlhttprequest == "1")
 		</div>
 	</div>
 </div>]]></template>
-		<template name="portal_search" version="120"><![CDATA[<div class="panel panel-primary">
+		<template name="portal_search" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
 		<span class="panel-title"><strong>{$lang->search_forums}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalsearch"></a>		
@@ -11006,30 +11006,30 @@ if(use_xmlhttprequest == "1")
 	<div id="portalsearch" class="panel-collapse collapse in">
   		<div class="panel-body small text-center">
 			<form method="post" action="{$mybb->settings['bburl']}/search.php">	
-					<input type="hidden" name="action" value="do_search">
-					<input type="hidden" name="postthread" value="1">
-					<input type="hidden" name="forums" value="all">
-					<input type="hidden" name="showresults" value="threads">
+                                       <input type="hidden" name="action" value="do_search" />
+                                       <input type="hidden" name="postthread" value="1" />
+                                       <input type="hidden" name="forums" value="all" />
+                                       <input type="hidden" name="showresults" value="threads" />
 				<div class="input-group">	
-					<input type="text" class="form-control input-sm" name="keywords" value="">
-					<span class="input-group-btn">{$gobutton}</span>
+					<input type="text" class="form-control input-sm" name="keywords" value="" />
+					<span class="input-group-btn" data-toggle="tooltip" title="" data-placement="left" data-original-title="{$lang->go}">{$gobutton}</span>
 				</div>	
 			</form><br>
 (<a href="{$mybb->settings['bburl']}/search.php">{$lang->advanced_search}</a>)	
 		</div>
 	</div>
 </div>]]></template>
-		<template name="portal_stats" version="1400"><![CDATA[<div class="panel panel-primary">
+		<template name="portal_stats" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
 		<span class="panel-title"><strong>{$lang->forum_stats}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalstats"></a>		
 	</div>
 	<div id="portalstats" class="panel-collapse collapse in">
   		<div class="panel-body small">
-			<strong><i class="fa fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_members} {$stats['numusers']}<br>
-			<strong><i class="fa fa-angle-double-right"></i>&nbsp;</strong>{$lang->latest_member} {$newestmember}<br>
-			<strong><i class="fa fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_threads} {$stats['numthreads']}<br>
-			<strong><i class="fa fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_posts} {$stats['numposts']}<br><br>
+			<strong><i class="fas fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_members} {$stats['numusers']}<br>
+			<strong><i class="fas fa-angle-double-right"></i>&nbsp;</strong>{$lang->latest_member} {$newestmember}<br>
+			<strong><i class="fas fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_threads} {$stats['numthreads']}<br>
+			<strong><i class="fas fa-angle-double-right"></i>&nbsp;</strong>{$lang->num_posts} {$stats['numposts']}<br><br>
 			<a href="{$mybb->settings['bburl']}/stats.php">{$lang->full_stats}</a>
 		</div>
 	</div>
@@ -11043,18 +11043,18 @@ if(use_xmlhttprequest == "1")
   		<div class="panel-body small text-center">{$welcometext}</div>
 	</div>
 </div>]]></template>
-		<template name="portal_welcome_guesttext" version="1609"><![CDATA[<span class="help-block">{$lang->guest_welcome_registration}</span>
+		<template name="portal_welcome_guesttext" version="1824"><![CDATA[<span class="help-block">{$lang->guest_welcome_registration}</span>
 <form method="post" action="{$mybb->settings['bburl']}/member.php">
 	<input type="hidden" name="action" value="do_login"><input type="hidden" name="url" value="{$portal_url}">
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-user"></i></span>	
+			<span class="input-group-addon"><i class="fas fa-user"></i></span>	
 			<input type="text" class="form-control small" name="username" id="username" value="" placeholder="{$username}">
 		</div>
 	</div>	
 	<div class="form-group">
 		<div class="input-group">
-			<span class="input-group-addon"><i class="fa fa-key"></i></span>			
+			<span class="input-group-addon"><i class="fas fa-key"></i></span>			
 			<input type="password" class="form-control small" name="password" id="password" value="" placeholder="{$lang->password}">
 		</div>
 	</div>	
@@ -11062,14 +11062,15 @@ if(use_xmlhttprequest == "1")
 		<label title="{$lang->remember_me_desc}">
 		<input type="checkbox" name="remember" value="yes">{$lang->remember_me}</label>
 	</div>
-	<button type="submit" class="btn btn-block btn-primary" name="loginsubmit" value="{$lang->login}"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;{$lang->login}</button>
+        <input name="my_post_key" type="hidden" value="{$mybb->post_code}" />
+	<button type="submit" class="btn btn-block btn-primary" name="loginsubmit" value="{$lang->login}"><i class="fas fa-sign-in-alt" aria-hidden="true"></i>&nbsp;{$lang->login}</button>
 </form>]]></template>
 		<template name="portal_welcome_membertext" version="120"><![CDATA[<em>{$lang->member_welcome_lastvisit}</em> {$lastvisit}<br>
 {$lang->since_then}<br>
 {$lang->new_threads}<br>
 {$lang->new_posts}<br><br>
 <a href="{$mybb->settings['bburl']}/search.php?action=getnew">{$lang->view_new}</a><br><a href="{$mybb->settings['bburl']}/search.php?action=getdaily">{$lang->view_todays}</a>]]></template>
-		<template name="portal_whosonline" version="120"><![CDATA[<div class="panel panel-primary">
+		<template name="portal_whosonline" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
 		<span class="panel-title"><strong>{$lang->online}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalwhosonline"></a>		
@@ -11077,12 +11078,12 @@ if(use_xmlhttprequest == "1")
 	<div id="portalwhosonline" class="panel-collapse collapse in">
   		<div class="panel-body small">			
 			{$lang->online_users}<br>
-			<strong><i class="fa fa-angle-double-right"></i>&nbsp;</strong>{$lang->online_counts}<br>
+			<strong><i class="fas fa-angle-double-right"></i>&nbsp;</strong>{$lang->online_counts}<br>
 			{$onlinemembers}				
 		</div>
 	</div>
 </div>]]></template>
-		<template name="portal_whosonline_memberbit" version="1400"><![CDATA[{$comma}<a href="{$mybb->settings['bburl']}/{$user['profilelink']}">{$user['username']}</a>{$invisiblemark}]]></template>
+		<template name="portal_whosonline_memberbit" version="1824"><![CDATA[<a href="{$mybb->settings['bburl']}/{$user['profilelink']}">{$user['username']}</a>{$invisiblemark}]]></template>
 		<template name="postbit" version="1801"><![CDATA[{$ignore_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
 <div class="post {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
