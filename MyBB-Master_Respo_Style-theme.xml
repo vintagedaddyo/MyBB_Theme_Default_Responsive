@@ -5329,7 +5329,7 @@ $(document).ready(function(){
 </select>]]></template>
 		<template name="forumbit_depth1_cat" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="panel-title"><strong><a href="{$forum_url}">{$forum['name']}</a></strong></span>
+		<span class="panel-title"><strong><i class="fas fa-arrow-right"></i>&nbsp;<a href="{$forum_url}">{$forum['name']}</a></strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#cat_{$forum['fid']}"></a>		
 	</div>
 	<div id="cat_{$forum['fid']}" class="panel-collapse collapse in">
@@ -6097,7 +6097,7 @@ $(document).ready(function() {
 		<template name="index_birthdays_birthday" version="1400"><![CDATA[{$comma}{$bdayuser['profilelink']}{$age}]]></template>
 		<template name="index_boardstats" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-			<span class="panel-title"><strong>{$lang->boardstats}</strong></span>
+			<span class="panel-title"><strong><i class="fas fa-chart-bar"></i>&nbsp;{$lang->boardstats}</strong></span>
         	<a class="accordion-toggle" data-toggle="collapse" href="#boardstats"></a>
 	</div>
 	<div id="boardstats" class="panel-collapse collapse in">
@@ -6115,8 +6115,8 @@ $(document).ready(function() {
 	</div>
 </div>]]></template>
 		<template name="index_logoutlink" version="1824"><![CDATA[<li><i class="fas fa-sign-out-alt"></i>&nbsp;<a href="member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}">{$lang->index_logout}</a></li>]]></template>
-		<template name="index_stats" version="1400"><![CDATA[<div class="row tcat small">
-	<div class="col-lg-12"><strong>{$lang->boardstats}</strong></div>
+		<template name="index_stats" version="1824"><![CDATA[<div class="row tcat small">
+	<div class="col-lg-12"><strong><i class="fas fa-info-circle"></i>&nbsp;{$lang->boardstats}</strong></div>
 </div>
 <div class="row small">
 	<div class="col-lg-12 padding-8px">
@@ -6127,8 +6127,8 @@ $(document).ready(function() {
 	</div>
 </div>]]></template>
 		<template name="index_statspage" version="1824"><![CDATA[<li><i class="fas fa-chart-bar"></i>&nbsp;<a href="stats.php">{$lang->forumstats}</a></li>]]></template>
-		<template name="index_whosonline" version="1400"><![CDATA[<div class="row tcat small">
-	<div class="col-lg-12"><strong>{$lang->whos_online}</strong> [<a href="online.php">{$lang->complete_list}</a>]</div>
+		<template name="index_whosonline" version="1824"><![CDATA[<div class="row tcat small">
+	<div class="col-lg-12"><strong><i class="fas fa-globe"></i>&nbsp;{$lang->whos_online}</strong> [<a href="online.php">{$lang->complete_list}</a>]</div>
 </div>
 <div class="row small">
 	<div class="col-lg-12 padding-8px">{$lang->online_note}<br>{$onlinemembers}</div>
@@ -10941,7 +10941,7 @@ if(use_xmlhttprequest == "1")
 </html>]]></template>
 		<template name="portal_announcement" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="panel-title"><strong><a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$announcement['subject']}</a></strong></span>		
+		<span class="panel-title"><strong><i class="fas fa-arrow-right"></i>&nbsp;<a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$announcement['subject']}</a></strong></span>		
 	</div>
 	<div class="panel-footer text-right small">
 		{$lang->posted_by} {$profilelink}  - {$anndate} - {$lang->forum} <a href="{$mybb->settings['bburl']}/{$announcement['forumlink']}">{$announcement['forumname']}</a> {$numcomments}		
@@ -10964,9 +10964,9 @@ if(use_xmlhttprequest == "1")
 		<template name="portal_announcement_numcomments" version="1400"><![CDATA[- <a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$lang->replies}</a> ({$announcement['replies']})]]></template>
 		<template name="portal_announcement_numcomments_no" version="120"><![CDATA[- {$lang->no_replies}]]></template>
 		<template name="portal_announcement_send_item" version="1824"><![CDATA[&nbsp;<a href="{$mybb->settings['bburl']}/sendthread.php?tid={$announcement['tid']}"><i class="fas fa-envelope" title="{$lang->send_to_friend}"></i></a>]]></template>
-		<template name="portal_latestthreads" version="120"><![CDATA[<div class="panel panel-primary">
+		<template name="portal_latestthreads" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-			<span class="panel-title"><strong>{$lang->latest_threads}</strong></span>
+			<span class="panel-title"><strong><i class="fas fa-user-clock"></i>&nbsp;{$lang->latest_threads}</strong></span>
         	<a class="accordion-toggle" data-toggle="collapse" href="#portallatestthreads"></a>
 	</div>	
 	<div id="portallatestthreads" class="panel-collapse collapse in">
@@ -11000,7 +11000,7 @@ if(use_xmlhttprequest == "1")
 </div>]]></template>
 		<template name="portal_search" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="panel-title"><strong>{$lang->search_forums}</strong></span>
+		<span class="panel-title"><strong><i class="fas fa-search"></i>&nbsp;{$lang->search_forums}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalsearch"></a>		
 	</div>
 	<div id="portalsearch" class="panel-collapse collapse in">
@@ -11021,7 +11021,7 @@ if(use_xmlhttprequest == "1")
 </div>]]></template>
 		<template name="portal_stats" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="panel-title"><strong>{$lang->forum_stats}</strong></span>
+		<span class="panel-title"><strong><i class="fas fa-chart-bar"></i>&nbsp;{$lang->forum_stats}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalstats"></a>		
 	</div>
 	<div id="portalstats" class="panel-collapse collapse in">
@@ -11072,7 +11072,7 @@ if(use_xmlhttprequest == "1")
 <a href="{$mybb->settings['bburl']}/search.php?action=getnew">{$lang->view_new}</a><br><a href="{$mybb->settings['bburl']}/search.php?action=getdaily">{$lang->view_todays}</a>]]></template>
 		<template name="portal_whosonline" version="1824"><![CDATA[<div class="panel panel-primary">
 	<div class="panel-heading">
-		<span class="panel-title"><strong>{$lang->online}</strong></span>
+		<span class="panel-title"><strong><i class="fas fa-globe"></i>&nbsp;{$lang->online}</strong></span>
         <a class="accordion-toggle" data-toggle="collapse" href="#portalwhosonline"></a>		
 	</div>
 	<div id="portalwhosonline" class="panel-collapse collapse in">
